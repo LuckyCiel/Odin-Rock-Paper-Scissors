@@ -1,0 +1,14 @@
+Get Computer Choice
+
+Big problem : 
+Write the code so that getComputerChoice will randomly
+return one of the following string values: “rock”, “paper” or “scissors”.
+
+1/ 
+Declare variable for 3 values = “rock”, “paper” or “scissors” string
+    1 = "rock"
+    2 = "paper"
+    3 = "scissors"
+
+Let the getComputerChoice return one of 3 values randomly
+
