@@ -10,5 +10,22 @@ Declare variable for 3 values = “rock”, “paper” or “scissors” string
     2 = "paper"
     3 = "scissors"
 
-Let the getComputerChoice return one of 3 values randomly
+Big problem : 
+Let the getComputerChoice return one of 3 values randomly.
 
+2/ Math random function :
+
+function getComputerChoice(computerInput) {
+    return Math.floor(Math.random() * computerInput);
+}
+
+Convertir Number to string when random value appear = 
+
+- Déclarer une variable const de la valeur de sortie de Math.random
+- Créer une fonction displayComputerValue qui console log un string correspondant Rock Paper or Scissors.
+    - if = 0 == 'Rock'
+    - else if = 1 == 'Paper'
+    - else if = 2 == 'Scissors'
+
+    Le reste est carré dans L'AXE !
+    Juste galéré au niveau de la fonction PlayGame.

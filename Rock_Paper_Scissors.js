@@ -3,7 +3,8 @@ function getComputerChoice(computerInput) {
     return Math.floor(Math.random() * computerInput);
 }
 
-const computerValue = getComputerChoice(3);
+let computerValue = getComputerChoice(3);
+
 
 function displayComputerValue(){
     if (computerValue == 0) {
@@ -75,7 +76,8 @@ function roundChecker(){
 
 }
 
-function roundContent(){
+function playRound(){
+    computerValue = getComputerChoice(3);
     humanSelection = getHumanChoice();
     computerSelection = displayComputerValue();
     roundChecker();
@@ -83,23 +85,25 @@ function roundContent(){
     console.log('Computer Score = ' + computerScore);
     console.log('Human Score = ' + humanScore);
     console.log("-------------------------------");
-    roundContent();
 }
-
-function playRound(numberOfRound){ 
-    (roundContent() * numberOfRound)
-
-}
-
-let computerScore = 0;
-let humanScore = 0;
-
-
 
 
 function playGame(){
-    playRound(5);
+    playRound();
+    if (computerScore === 5){
+        return console.log('Computer WIN the Game');
+    }
+    else if (humanScore === 5){
+        return console.log('Human WIN the Game');
+    }
+    else if ((computerScore != 5) || (humanScore != 5)){
+        playGame();
+    }
 }
+
+
+let computerScore = 0;
+let humanScore = 0;
 
 
 
